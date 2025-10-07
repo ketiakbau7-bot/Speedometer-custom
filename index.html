@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speedometer Custom</title>
 
-  <!-- Import Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Intel+One+Mono:wght@500&display=swap" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Intel+One+Mono:wght@500&display=swap" rel="stylesheet">
 
-  <!-- Link ke CSS kamu -->
-  <link rel="stylesheet" href="index.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Dial utama -->
   <div class="dial">
     <svg class="container">
       <path id="speedoArcBg" class="arc-bg" />
@@ -26,41 +25,30 @@
       <path id="engine" class="engine-health" />
     </svg>
 
-    <!-- Pointer RPM / Speed -->
     <div id="speedPointer" class="speed-pointer"></div>
-
-    <!-- Titik tengah -->
     <div class="circle-point"></div>
     <div class="inside-circle"></div>
 
-    <!-- Ticks (garis-garis skala) -->
     <div class="ticks"></div>
     <div class="engineticks"></div>
 
-    <!-- RPM kecil / bahan bakar -->
     <div class="smallticks"></div>
     <div class="smallcircle-point"></div>
     <div class="inside-smallcircle"></div>
     <div id="fuelPointer" class="small-fuel-pointer"></div>
   </div>
 
-  <!-- Nilai digital -->
   <div class="speedo-container">
     <div class="speed">RPM</div>
     <div id="speedValue" class="speed-display">0</div>
-
     <div id="gearValue" class="gear">N</div>
     <div id="gearArrow" class="gear-arrow">▲</div>
   </div>
 
   <div class="circular-number"></div>
+  <div class="fuel-text"><span id="fuelValue">100%</span></div>
 
-  <!-- Fuel indikator -->
-  <div class="fuel-text">
-    <span id="fuelValue">100%</span>
-  </div>
-
-  <!-- Script utama -->
+  <!-- JS -->
   <script src="index.js"></script>
 </body>
 </html>
