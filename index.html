@@ -3,18 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFS Speedometer</title>
+  <title>NFS Speedometer Custom</title>
 
-  <!-- Panggil CSS -->
+  <!-- CSS utama -->
   <link rel="stylesheet" href="index.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Tempat speedometer akan muncul -->
-  <div id="speedometer"></div>
+  <!-- Lingkaran besar speedometer -->
+  <div class="dial">
 
-  <!-- Panggil script JS -->
+    <!-- Background container -->
+    <img src="container.png" alt="Speedometer Container" class="container">
+
+    <!-- Arc engine -->
+    <svg class="arc-container">
+      <path id="engineArcBg" class="enginebg-arc"></path>
+      <path id="engineArc" class="engine-arc"></path>
+      <path id="engine" class="engine-health"></path>
+    </svg>
+
+    <!-- Ticks (angka lingkaran RPM besar) -->
+    <div class="ticks"></div>
+    <div class="circular-number"></div>
+
+    <!-- Pointer utama (jarum besar RPM) -->
+    <div id="speedPointer" class="speed-pointer"></div>
+
+    <!-- Titik tengah jarum besar -->
+    <div class="circle-point"></div>
+    <div class="inside-circle"></div>
+
+    <!-- Nilai kecepatan dan gear -->
+    <div id="speedValue" class="speed">0</div>
+    <div class="speed-display">RPM</div>
+    <div id="gearValue" class="gear">N</div>
+    <div id="gearArrow" class="gear-arrow"></div>
+
+    <!-- Small Speedometer (Fuel) -->
+    <div class="small-speedo">
+      <svg>
+        <path id="smallArcBg" class="small-arc-bg"></path>
+        <path id="insideArcBg" class="inside-arc-bg"></path>
+        <path id="inside2ArcBg" class="inside2-arc-bg"></path>
+        <path id="smallRpmRedline" class="small-rpm-redline"></path>
+      </svg>
+
+      <div class="smallticks"></div>
+      <div id="fuelPointer" class="small-fuel-pointer"></div>
+      <div class="smallcircle-point"></div>
+      <div class="inside-smallcircle"></div>
+
+      <div class="empty">E</div>
+      <img src="fuel-icon.png" alt="Fuel" class="fuel-icon">
+      <div class="full">F</div>
+      <div id="fuelValue" class="fuel-text">100%</div>
+    </div>
+
+  </div>
+
+  <!-- JS utama -->
   <script src="index.js"></script>
-
 </body>
 </html>
